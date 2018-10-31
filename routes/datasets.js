@@ -140,7 +140,7 @@ router.post("/", helper.authenticate, function(req, res) {
     // (this way it will appear in the right order on the 'edit' view)
     var propertiesList = [];
     for (var property in req.body) {
-        if (req.body.hasOwnProperty(property)) {
+        if (Object.prototype.hasOwnProperty.call(req.body, property)) {
             propertiesList.push(property);
         }
     }
