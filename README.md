@@ -25,8 +25,9 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org
  
 # Install Express-generator
-# the -g option is used so that the package is installed globally, 
-# meaning that we can now use it from the command line
+    the -g option is used so that the package is installed globally, 
+    meaning that we can now use it from the command line
+
 # Try express -h to see the options now available
 sudo npm install express-generator -g
  
@@ -38,7 +39,7 @@ sudo npm install mongoose connect-mongo express-session method-override bcrypt-n
 
 
 # Generate skeleton
-# express IoT.me
+    express IoT.me
  
 # fetch repo
 git clone git@github.com:aldem7880/aqua_IoT.git
@@ -49,8 +50,6 @@ sudo npm install
  
 # Run the app
 nodemon bin/www
-
-
 
 
 --------------- forked from:
