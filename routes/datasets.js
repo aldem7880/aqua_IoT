@@ -24,7 +24,7 @@ router.get("/update", function(req, res) {
             // build $push query with variables passed in POST request
             // we check that the variable have already been registered otherwise they"ll be ignored
             for (var property in req.query) {
-                if (req.query.hasOwnProperty(property)&dataset.data.hasOwnProperty(property)) {
+                if (Object.prototype.hasOwnProperty.call(req.query, property)&Object.prototype.hasOwnProperty.call(dataset.data, property)) {
                   updateQuery["data." + property + ".values"] = [parseInt(req.query[property]), Date.now()]; 
                 }
             }
@@ -195,7 +195,7 @@ router.put("/:id/", helper.authenticate, function(req, res) {
         }
         // If variable in request body and not in dataset, add to setList (or if no variable at all in dataset)
         for (var property in req.body) {
-            if (!dataset.data||(req.body.hasOwnProperty(property)&!dataset.data.hasOwnProperty(property))) {
+            if (!dataset.data||(Object.prototype.hasOwnProperty.call(req.body, property)&!Object.prototype.hasOwnProperty.call(dataset.data, property))) {
                 console.log(property)
                 console.log(req.body[property])
                 setList["data."+ property] = {name:req.body[property],
@@ -205,7 +205,7 @@ router.put("/:id/", helper.authenticate, function(req, res) {
 
         // If variable in dataset but not in request body, add to unsetList
         for (var property in dataset.data) {
-            if (dataset.data&&dataset.data.hasOwnProperty(property)&!req.body.hasOwnProperty(property))
+            if (dataset.data&&Object.prototype.hasOwnProperty.call(dataset.data, property)&!Object.prototype.hasOwnProperty.call(req.body, property))
             {
                 unsetList["data."+property] = true;
             }
