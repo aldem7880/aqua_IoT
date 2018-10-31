@@ -5,27 +5,10 @@ purpose is to make it work under ubuntu 16.4 LTS and latest nodejs + mongodb.
 # TODO:
 	- setup vagrant
 	- autoconfig with ansible
-	- fix errors 
+	- fix errors :
+        https://github.com/aldem7880/aqua_IoT/issues/1
 
---------------
-TypeError: req.body.hasOwnProperty is not a function
-    at /root/IoT.me/routes/datasets.js:143:22
-    at Layer.handle [as handle_request] (/root/IoT.me/node_modules/express/lib/router/layer.js:95:5)
-    at next (/root/IoT.me/node_modules/express/lib/router/route.js:137:13)
-    at authenticate (/root/IoT.me/utils.js:4:9)
-    at Layer.handle [as handle_request] (/root/IoT.me/node_modules/express/lib/router/layer.js:95:5)
-    at next (/root/IoT.me/node_modules/express/lib/router/route.js:137:13)
-    at Route.dispatch (/root/IoT.me/node_modules/express/lib/router/route.js:112:3)
-    at Layer.handle [as handle_request] (/root/IoT.me/node_modules/express/lib/router/layer.js:95:5)
-    at /root/IoT.me/node_modules/express/lib/router/index.js:281:22
-    at Function.process_params (/root/IoT.me/node_modules/express/lib/router/index.js:335:12)
-    at next (/root/IoT.me/node_modules/express/lib/router/index.js:275:10)
-    at Function.handle (/root/IoT.me/node_modules/express/lib/router/index.js:174:3)
-    at router (/root/IoT.me/node_modules/express/lib/router/index.js:47:12)
-    at Layer.handle [as handle_request] (/root/IoT.me/node_modules/express/lib/router/layer.js:95:5)
-    at trim_prefix (/root/IoT.me/node_modules/express/lib/router/index.js:317:13)
-    at /root/IoT.me/node_modules/express/lib/router/index.js:284:7
----------------
+
 
 How to install:
 
