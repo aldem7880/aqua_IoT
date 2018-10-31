@@ -10,11 +10,13 @@
 
 # Install node.js
 ```
-curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
-```
-    ^^^^ change to latest nodejs repo
+curl --silent --location https://deb.nodesource.com/setup_8.x | sudo bash -
+sudo apt-get install --yes nodejs git
 
-```sudo apt-get install --yes nodejs```
+$ node -v
+v8.12.0
+
+```
  
 # Install latest stable MongoDB
 ```
@@ -31,11 +33,19 @@ sudo apt-get install -y mongodb-org
 # Try express -h to see the options now available
 ```
 sudo npm install express-generator -g
+
+/usr/bin/express -> /usr/lib/node_modules/express-generator/bin/express-cli.js
++ express-generator@4.16.0
+added 10 packages from 13 contributors in 2.133s
 ```
  
 # Install Nodemon
 ```
 sudo npm install nodemon -g
+...
++ nodemon@1.18.5
+added 233 packages from 136 contributors in 8.723s
+
 ```
 
 # Install Node plugins
@@ -48,7 +58,7 @@ sudo npm install mongoose connect-mongo express-session method-override bcrypt-n
  
 # Fetch repo
 ```
-git clone git@github.com:aldem7880/aqua_IoT.git
+git clone https://github.com/aldem7880/aqua_IoT.git
 ```
 
 # Install dependencies
